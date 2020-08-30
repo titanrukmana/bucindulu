@@ -7,7 +7,7 @@ $result = mysqli_query($db,"SELECT * FROM users WHERE username='" . $_POST["user
 $row  = mysqli_fetch_array($result);
 if(is_array($row)) {
 $_SESSION["id"] = $row['id'];
-$_SESSION["name"] = $row['username'];
+$_SESSION["username"] = $row['username'];
 } else {
 $message = "Invalid Username or Password!";
 }

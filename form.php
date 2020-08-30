@@ -29,6 +29,7 @@ if($_SESSION["name"]) {
 </form>
 <a href="admin.php">back to admin panel</a>
 Click here to <a href="logout.php" title="Logout">Logout.</a>
+Click here to <a href="test.php">see the front page</a> 
 <?php
 }else echo "<h1>Please login first .</h1>";
 ?>
