@@ -20,7 +20,7 @@ if(isset($_POST['submit'])){
 </head>
 <body>
 <?php
-if($_SESSION["name"]) {
+if(isset($_SESSION["username"])) {
 ?>
 <form method='post' action=''>
   <input type='text' placeholder='Text' name='txt_text' id='txt_text' ><br/>
