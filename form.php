@@ -5,11 +5,14 @@ include 'connection/connect.php'; // Database connection
 if(isset($_POST['submit'])){
   $creator = $_POST['txt_creator'];
   $text = $_POST['txt_text'];
-  // Insert record
+  if(!empty($creator && !empty($text))){
   $insert_query = "INSERT INTO pesan(creator, text) VALUES('".$creator."','".$text."')";
-
-  mysqli_query($db,$insert_query);
-  ?> terima kasih sudah menambahkan teks, <?php echo $_SESSION["username"];
+  
+  mysqli_query($db,$insert_query);?>
+  terima kasih sudah menambahkan teks, <?php echo $_SESSION["username"];}
+else {
+    echo "<h1>mohon isi semua form</h1>";
+}
 }
 ?>
 <!DOCTYPE html>
@@ -19,6 +22,11 @@ if(isset($_POST['submit'])){
 <title>Add Record Form</title>
 </head>
 <body>
+<script>
+if ( window.history.replaceState ) {
+  window.history.replaceState( null, null, window.location.href );
+}
+</script>
 <?php
 if(isset($_SESSION["username"])) {
 ?>
