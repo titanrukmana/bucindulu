@@ -13,6 +13,19 @@ if(isset($_POST['submit'])){
 else {
     echo "<h1>mohon isi semua form</h1>";
 }
+// special
+}
+if(isset($_POST['submits'])){
+    $creator = $_POST['txt_creator'];
+    $text = $_POST['txt_text'];
+    if(!empty($creator && !empty($text))){
+    $insert_query = "INSERT INTO pesans(creator, text) VALUES('".$creator."','".$text."')";
+    
+    mysqli_query($db,$insert_query);?>
+    terima kasih sudah menambahkan teks, <?php echo $_SESSION["username"];}
+  else {
+      echo "<h1>mohon isi semua form</h1>";
+  }
 }
 ?>
 <!DOCTYPE html>
@@ -33,7 +46,8 @@ if(isset($_SESSION["username"])) {
 <form method='post' action=''>
   <input type='text' placeholder='Text' name='txt_text' id='txt_text' ><br/>
   <input type='text' placeholder='Creator' name='txt_creator' id='txt_creator' ><br/>
-  <input type='submit' value='Submit' id='submit' name='submit'>
+  <input type='submit' value='Submit' id='submit' name='submit'>   <input type='submit' value='Submits' id='submits' name='submits'>
+
 </form>
 <a href="admin.php">back to admin panel</a>
 Click here to <a href="logout.php" title="Logout">Logout.</a>

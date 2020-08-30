@@ -34,6 +34,7 @@ function startTime() {
   var curYear = today.getFullYear();
   var date = curWeekDay + ", " + curDay + " " + curMonth + " " + curYear;
   document.getElementById("date").innerHTML = date;
+  document.getElementById("today").innerHTML = today;
 
   var time = setTimeout(function () {
     startTime();

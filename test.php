@@ -1,4 +1,5 @@
-<?php include './connection/connect.php'; ?>
+<?php include './connection/connect.php';
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +25,6 @@
     <div class="background align-middle">
         <div class="row-xs d-flex justify-content-center">
             <div class="col-xs-6">
-
                 <body onload="startTime()">
                     <div id="clockdate">
                         <div class="clockdate-wrapper">
@@ -33,9 +33,11 @@
                         </div>
                     </div>
                     <div class="col-xs-6 tengah justify-content-center noselect">
-                        <p>_____________________________</p>
+                        <p>_____________________________ </p>
                     </div>
                     <?php
+                    // selain 21
+                    if (date("d") != 21){
                     $sql = "SELECT * from pesan ORDER BY RAND() LIMIT 0,1";
                     if ($query = mysqli_query($db, $sql)) {
                         if (mysqli_num_rows($query) > 0) {
@@ -51,11 +53,30 @@
                         }
                     } else {
                         echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
-                    } ?>
+                    }
+                }
+                // tanggal 21
+                else {
+                    $sql = "SELECT * from pesans ORDER BY RAND() LIMIT 0,1";
+                    if ($query = mysqli_query($db, $sql)) {
+                        if (mysqli_num_rows($query) > 0) {
+                            while ($row = mysqli_fetch_array($query)) {
+                                echo '<div class="col-xs-6 tengah justify-content-center">
+                        <h3 class="text-break text-center">"' . nl2br($row['text']) . '"</h3></div>';
+                                echo "<div class='col-xs-6 tengah justify-content-center'><p><i>-
+                        " . $row['creator'] . " -</i></p>";
+                            }
+                            mysqli_free_result($query);
+                        } else {
+                            echo "<div class='col-xs-6 tengah justify-content-center'>Tidak ada pesan.</div>";
+                        }
+                    } else {
+                        echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+                    }
+                }?>
             </div>
         </div>
     </div>
 </body>
 </body>
-
 </html>
