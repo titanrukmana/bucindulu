@@ -15,7 +15,7 @@ Welcome <?php echo $_SESSION["username"]; ?>. Click here to <a href="logout.php"
 Click here to <a href="form.php" title="form">add text</a>
 Click here to Click here to <a href="test.php" title="form">see front page</a>
 <?php
-} else echo "<h1>Please login first .</h1>";
+}else echo "<h1><a href='login.php'>Please login first .</a></h1>";
 ?>
 </body>
 </html>

@@ -9,7 +9,7 @@ if(isset($_POST['submit'])){
   $insert_query = "INSERT INTO pesan(creator, text) VALUES('".$creator."','".$text."')";
 
   mysqli_query($db,$insert_query);
-  ?> terima kasih sudah menambahkan teks, <?php echo $_SESSION["name"];
+  ?> terima kasih sudah menambahkan teks, <?php echo $_SESSION["username"];
 }
 ?>
 <!DOCTYPE html>
@@ -31,7 +31,7 @@ if(isset($_SESSION["username"])) {
 Click here to <a href="logout.php" title="Logout">Logout.</a>
 Click here to <a href="test.php">see the front page</a> 
 <?php
-}else echo "<h1>Please login first .</h1>";
+} else echo "<h1><a href='login.php'>Please login first .</a></h1>";
 ?>
 </body>
 </html>
