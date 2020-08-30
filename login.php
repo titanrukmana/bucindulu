@@ -1,10 +1,9 @@
 <?php
-include_once 'connection/connect.php';
 session_start();
 $message="";
-$password = md5($_POST['password']);
 if(count($_POST)>0) {
-$result = mysqli_query($db,"SELECT * FROM users WHERE username='" . $_POST["username"] . "' and password='$password'");
+include_once 'connection/connect.php';
+$result = mysqli_query($db,"SELECT * FROM users WHERE username='" . $_POST["username"] . "' and password = '". md5($_POST["password"])."'");
 $row  = mysqli_fetch_array($result);
 if(is_array($row)) {
 $_SESSION["id"] = $row['id'];
