@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 29, 2020 at 05:15 PM
+-- Generation Time: Aug 30, 2020 at 08:10 AM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.3.12
 
@@ -39,7 +39,10 @@ CREATE TABLE `pesan` (
 --
 
 INSERT INTO `pesan` (`creator`, `created_at`, `text`) VALUES
-('david', '2020-08-29 22:08:41', 'kontol<br>memek<br>angsa<br>angsa di kuali');
+('david', '2020-08-29 22:08:41', 'KONTOL\r\nMEMEK\r\nANGSA'),
+('diaz', '2020-08-29 22:22:03', 'kontol'),
+('dapit', '2020-08-30 00:08:32', 'memek bau terasi'),
+('diajaid', '2020-08-30 00:08:33', 'ikan teri bakar');
 
 -- --------------------------------------------------------
 
@@ -58,7 +61,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`) VALUES
-(1, 'test', 'test');
+(5, 'admiral', 'fbf65f0ee1cefca87d627b620f19a037');
 
 --
 -- Indexes for dumped tables
@@ -78,7 +81,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

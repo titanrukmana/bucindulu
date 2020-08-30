@@ -1,101 +1,113 @@
 .background {
-    height: 100%;
-    width: 100%;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    position: absolute;
-    background: linear-gradient(218deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3);
-    background-size: 1600% 1600%;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  background: linear-gradient(
+    218deg,
+    #ff2400,
+    #e81d1d,
+    #e8b71d,
+    #e3e81d,
+    #1de840,
+    #1ddde8,
+    #2b1de8,
+    #dd00f3
+  );
+  background-size: 1600% 1600%;
 
-    -webkit-animation: rainbow 10s ease infinite;
-    -moz-animation: rainbow 10s ease infinite;
-    -o-animation: rainbow 10s ease infinite;
-    animation: rainbow 10s ease infinite;
-    font-family: 'Open Sans', sans-serif;
-    color: white
+  -webkit-animation: rainbow 15s ease infinite;
+  -moz-animation: rainbow 15s ease infinite;
+  -o-animation: rainbow 15s ease infinite;
+  animation: rainbow 15s ease infinite;
+  font-family: "Ubuntu", sans-serif;
+  color: white;
 }
 
 @-webkit-keyframes rainbow {
-    0% {
-        background-position: 0% 84%
-    }
+  0% {
+    background-position: 0% 84%;
+  }
 
-    50% {
-        background-position: 100% 17%
-    }
+  50% {
+    background-position: 100% 17%;
+  }
 
-    100% {
-        background-position: 0% 84%
-    }
+  100% {
+    background-position: 0% 84%;
+  }
 }
 
 @-moz-keyframes rainbow {
-    0% {
-        background-position: 0% 84%
-    }
+  0% {
+    background-position: 0% 84%;
+  }
 
-    50% {
-        background-position: 100% 17%
-    }
+  50% {
+    background-position: 100% 17%;
+  }
 
-    100% {
-        background-position: 0% 84%
-    }
+  100% {
+    background-position: 0% 84%;
+  }
 }
 
 @-o-keyframes rainbow {
-    0% {
-        background-position: 0% 84%
-    }
+  0% {
+    background-position: 0% 84%;
+  }
 
-    50% {
-        background-position: 100% 17%
-    }
+  50% {
+    background-position: 100% 17%;
+  }
 
-    100% {
-        background-position: 0% 84%
-    }
+  100% {
+    background-position: 0% 84%;
+  }
 }
 
 @keyframes rainbow {
-    0% {
-        background-position: 0% 84%
-    }
+  0% {
+    background-position: 0% 84%;
+  }
 
-    50% {
-        background-position: 100% 17%
-    }
+  50% {
+    background-position: 100% 17%;
+  }
 
-    100% {
-        background-position: 0% 84%
-    }
+  100% {
+    background-position: 0% 84%;
+  }
 }
 
 .row-xs {
-    display: flex;
-    margin-top: 15%;
+  display: flex;
+  margin-top: 15%;
 }
 
 .tengah {
-    display: flex;
-    font-weight: 800;
-
+  display: flex;
 }
 
+.tebel {
+  font-weight: 700 !important;
+  font: bold;
+}
 .noselect {
-    -webkit-touch-callout: none;
-    /* iOS Safari */
-    -webkit-user-select: none;
-    /* Safari */
-    -khtml-user-select: none;
-    /* Konqueror HTML */
-    -moz-user-select: none;
-    /* Old versions of Firefox */
-    -ms-user-select: none;
-    /* Internet Explorer/Edge */
-    user-select: none;
-    /* Non-prefixed version, currently
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
                                     supported by Chrome, Edge, Opera and Firefox */
 }
