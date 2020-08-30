@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 30, 2020 at 08:10 AM
+-- Generation Time: Aug 30, 2020 at 10:15 AM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.3.12
 
@@ -30,7 +30,6 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `pesan` (
   `creator` varchar(50) NOT NULL,
-  `created_at` datetime DEFAULT current_timestamp(),
   `text` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -38,11 +37,11 @@ CREATE TABLE `pesan` (
 -- Dumping data for table `pesan`
 --
 
-INSERT INTO `pesan` (`creator`, `created_at`, `text`) VALUES
-('david', '2020-08-29 22:08:41', 'KONTOL\r\nMEMEK\r\nANGSA'),
-('diaz', '2020-08-29 22:22:03', 'kontol'),
-('dapit', '2020-08-30 00:08:32', 'memek bau terasi'),
-('diajaid', '2020-08-30 00:08:33', 'ikan teri bakar');
+INSERT INTO `pesan` (`creator`, `text`) VALUES
+('KUda', 'MEMEk'),
+('testis', 'tes dulu brow'),
+('tes 3', 'tes 3'),
+('tes 4', 'tes 4');
 
 -- --------------------------------------------------------
 
