@@ -46,7 +46,7 @@ if(isset($_SESSION["username"])) {
 <form method='post' action=''>
   <input type='text' placeholder='Text' name='txt_text' id='txt_text' ><br/>
   <input type='text' placeholder='Creator' name='txt_creator' id='txt_creator' ><br/>
-  <input type='submit' value='Submit' id='submit' name='submit'>   <input type='submit' value='Submits' id='submits' name='submits'>
+  <input type='submit' value='Submit' id='submit' name='submit'><input type='submit' value='Submits' id='submits' name='submits'>
 
 </form>
 <a href="admin.php">back to admin panel</a>
